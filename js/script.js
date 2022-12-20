@@ -94,4 +94,6 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
+//test comment
+
 console.log(personalMovieDB);
