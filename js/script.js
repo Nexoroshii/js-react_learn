@@ -42,7 +42,14 @@
 // // console.log(str1);
 
 
-const str = prompt("", "");
-const products = str.split(", ");
-products.sort();
-console.log(products.join('; '));
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join('; '));
+const att=[1,11, 26, 86, 31,2,3,7];
+att.sort(compareNum);
+console.log(att);
+
+function compareNum(a,b){
+  return a-b;
+}
