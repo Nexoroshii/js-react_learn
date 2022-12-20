@@ -94,6 +94,17 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
-//test comment
+function showMyDB() {
+  if (personalMovieDB.privat === false) {
+    console.log(personalMovieDB);
+  }
+}
 
-console.log(personalMovieDB);
+showMyDB();
+function writeYourGenres() {
+  for (let i = 1; i <= 3; i++) {
+        personalMovieDB.genres[i - 1] = prompt(`Your favourite genre ${i}`);
+  }
+}
+writeYourGenres();
+
