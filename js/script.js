@@ -1,5 +1,5 @@
 // function sayHello(a) {
-  
+
 //   if(typeof(a)!=='number'|| a===0 || !Number.isInteger(a)){
 //     return "";
 //   }
@@ -24,13 +24,10 @@
 //   }
 //   return str;
 
-  
-  
 // }
 
 // console.log(sayHello(16));
 // // let v=1, b=2,n=3;
-
 
 // // let str1=`${v}`;
 // // console.log(str1);
@@ -42,7 +39,59 @@
 // // console.log(str1);
 // mazafaka
 
-const str = prompt("", "");
-const products = str.split(", ");
-products.sort();
-console.log(products.join('; '));
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join('; '));
+
+let numberOfFilms;
+
+function start() {
+  numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+
+  while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+  }
+}
+
+start();
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+};
+
+function rememberMyfilms() {
+  for (let i = 0; i < 2; i++) {
+    const a = prompt("Один из последних просмотренных фильмов?", ""),
+      b = prompt("На сколько вы оцените его?", "");
+    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+      personalMovieDB.movies[a] = b;
+      console.log("done");
+    } else {
+      console.log("error");
+      i--;
+    }
+  }
+}
+
+rememberMyfilms();
+
+function detectPersonalLevel() {
+  if (personalMovieDB.count < 10) {
+    console.log("not enough");
+  } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 50) {
+    console.log("you are classical !");
+  } else if (personalMovieDB.count >= 30) {
+    console.log("you are not busy person)");
+  } else {
+    console.log("error!");
+  }
+}
+
+detectPersonalLevel();
+
+console.log(personalMovieDB);
