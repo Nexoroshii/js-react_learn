@@ -40,7 +40,7 @@
 // // v=555;
 // //  str1+=` ${v}`;
 // // console.log(str1);
-
+// mazafaka
 
 const str = prompt("", "");
 const products = str.split(", ");
