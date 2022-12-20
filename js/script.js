@@ -107,4 +107,5 @@ function writeYourGenres() {
   }
 }
 writeYourGenres();
+console.log("xa-xa");
 
