@@ -1,18 +1,18 @@
-stack of technologies
+1) stack of technologies:
 
-babel
-Jquery
-webpack
-gulp
-
-
+babel,
+Jquery,
+webpack,
+gulp;
 
 
 
 
-can use in work
-open-server
-json-server
+
+
+2) can use in work:
+open-server,
+json-server;
 
 
 
