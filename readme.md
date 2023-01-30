@@ -1,5 +1,6 @@
 1) stack of technologies:
 
+preprocessors(scss/sass),
 babel,
 Jquery,
 webpack,
